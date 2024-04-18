@@ -36,6 +36,7 @@ public class ScoreAndMenuManager : MonoBehaviour
         GameObject newUI = Instantiate(UI);
         newUI.transform.position = UIPosition.transform.position;
         newUI.transform.SetParent(UIPosition.transform);
+        newUI.transform.rotation = UIPosition.transform.rotation;
         newUI.GetComponent<HandleUIIterations>().samm = gameObject.GetComponent<ScoreAndMenuManager>();
         input = newUI.transform.GetChild(1).GetComponent<TMP_InputField>();
         leftHandLineRenderer.enabled = true;
